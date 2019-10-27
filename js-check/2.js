@@ -4,7 +4,7 @@
  */
 
 const user = {
-    firstName: 'test',
+    firstName: 'John',
     lastName: 'Doe',
     rate: 0.3,
     address: {
