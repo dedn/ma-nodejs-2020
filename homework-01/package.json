@@ -12,7 +12,6 @@
   "author": "kirillov",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
     "nanoid": "^2.1.6"
   },
   "devDependencies": {
