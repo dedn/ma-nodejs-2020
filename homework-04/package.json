@@ -1,5 +1,5 @@
 {
-  "name": "homework-01",
+  "name": "homework-04",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -9,8 +9,7 @@
   },
   "author": "kirillov",
   "license": "ISC",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
