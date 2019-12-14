@@ -17,8 +17,8 @@ setTimeout(() => {
           : console.log('result for second throw', secondRes);
         setTimeout(() => {
           console.log('result', firstRes + secondRes);
-        }, 3000);
+        }, 1000);
       });
-    }, 2000);
+    }, 1300);
   });
-}, 1000);
+}, 700);
