@@ -1,17 +1,24 @@
-const getRandomNumber = () => Math.floor(Math.random() * 6) + 1;
-const throwDice = cb => cb(getRandomNumber());
+const getRandomNumber = () => Math.floor(Math.random() * 7);
+
+const throwDice = cb => {
+  const oneThrow = getRandomNumber();
+  return oneThrow ? cb(null, oneThrow) : cb(new Error('Lost dice'));
+};
 
 setTimeout(() => {
-  throwDice(firstThrow => {
-    console.log(`first throw ${firstThrow}`);
+  throwDice((firstErr, firstRes) => {
+    firstErr
+      ? console.log('error for first throw', firstErr.message)
+      : console.log('result for first throw', firstRes);
     setTimeout(() => {
-      throwDice(secondThrow => {
-        console.log(`second throw${secondThrow}`);
+      throwDice((secondErr, secondRes) => {
+        secondErr
+          ? console.log('error for second throw', secondErr.message)
+          : console.log('result for second throw', secondRes);
         setTimeout(() => {
-          const sum = firstThrow + secondThrow;
-          console.log(`results ${sum}`);
-        }, 700);
+          console.log('result', firstRes + secondRes);
+        }, 3000);
       });
     }, 2000);
   });
-}, 3000);
+}, 1000);
